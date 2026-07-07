@@ -1,22 +1,10 @@
 class Solution {
 public:
     long long sumAndMultiply(int n) {
-
-        string s = to_string(n);
-        long long total = 0;
-        string num = "";
-
-        for(char ch:s){
-            long long x = ch - '0';
-            if(x>0){
-                total += x;
-                num += ch;
-            }
-            else continue;
-        }
-        if(num.empty())
-        return 0;
-        long long ans = total * stoi(num);
-        return ans;
+        long long x = 0, s = 0;
+        for (char c : to_string(n))
+            if (c != '0')
+                x = x * 10 + c - '0', s += c - '0';
+        return x * s;
     }
 };
