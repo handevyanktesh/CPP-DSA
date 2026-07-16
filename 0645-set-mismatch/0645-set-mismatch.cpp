@@ -22,11 +22,6 @@ public:
                 break;
             }
         }
-
-        vector<int>v;
-        v.push_back(ans);
-        v.push_back(missing);
-
-        return v;
+        return {ans, missing};
     }
 };
